@@ -1,6 +1,13 @@
 import { logoutAccount } from "@/lib/actions/user.actions";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 
 const Footer = ({ user, type = "desktop" }: FooterProps) => {
   const router = useRouter();
@@ -24,7 +31,16 @@ const Footer = ({ user, type = "desktop" }: FooterProps) => {
         </p>
       </div>
       <div onClick={handleLogOut} className="footer_image">
-        <Image src={"icons/logout.svg"} fill alt="logout" />
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <Image src={"icons/logout.svg"} fill alt="logout" />
+            </TooltipTrigger>
+            <TooltipContent className="bg-bankGradient">
+              <p>Log Out</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
     </footer>
   );
