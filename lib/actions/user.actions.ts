@@ -234,7 +234,7 @@ export const exchangePublicToken = async ({
 
     // Revalidate the path to reflect the changes
     revalidatePath("/");
-537-    // Return a success message
+    // Return a success message
     return parseStringify({
       publicTokenExchange: "complete",
     });
