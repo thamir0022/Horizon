@@ -42,7 +42,7 @@ npm run dev
 
 ### Live Site🌐
 
-Visit [live site url] to see Horizon in action! 🎉
+Visit [Horizon](https://horizon-gamma-seven.vercel.app/) to see Horizon in action! 🎉
 
 ### Building and Starting the Production Server
 
